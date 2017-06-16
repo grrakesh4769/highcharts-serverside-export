@@ -5,12 +5,8 @@ function renderSVGFromObject (jsonGeneralOptions,jsonOptions) {
 	
 	var chartOptions = jsonOptions;
 	new FormatWrapper ().visitObject(chartOptions);
-	chartOptions.chart.renderTo=n;
-	chartOptions.chart.forExport=true;
 
 	var chart = new Highcharts.Chart(n,chartOptions);
-	//chart.renderTo=n;
-	//chart.forExport=true;
 	svg = chart.getSVG ();
 	chart.destroy ();
 	Highcharts.discardElement (n);
