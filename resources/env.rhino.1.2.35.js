@@ -8136,7 +8136,7 @@ __extend__(HTMLElement.prototype, {
         return Number((this.style.height || '').replace("px",""));
     },
     get offsetWidth(){
-        return Number((this.style.width || '').replace("px",""));
+        return Number(((this.style.width?(''+this.style.width):this.style.width) || '').replace("px",""));//While running area-negative chart the width was a number and not an object; Need to find root cause
     },
     offsetLeft: 0,
     offsetRight: 0,
