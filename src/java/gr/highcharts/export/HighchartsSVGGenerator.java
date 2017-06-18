@@ -21,7 +21,7 @@ public class HighchartsSVGGenerator
 {
 	private volatile static HighchartsSVGGenerator svgGenerator;
 
-	private static String[] scriptFileNames = { "env.rhino.1.2.35.js", "jquery-1.11.3.js", "highcharts.src.js", "data.src.js", "exporting.src.js", "svg-renderer-highcharts.js", "add-BBox.js", "formatWrapper.js" };
+	private static String[] scriptFileNames = { "env.rhino.1.2.35.js", "jquery-1.11.3.js", "highcharts.src.js", "highcharts-more.src.js", "data.src.js", "exporting.src.js", "svg-renderer-highcharts.js", "add-BBox.js", "formatWrapper.js" };
 	private static File jsResourcesDirectory = new File("D:\\HSE_resources\\highcharts_4_2_4");
 	private static ContextFactory CONTEXT_FACTORY = org.mozilla.javascript.tools.shell.Main.shellContextFactory;//Could use static import
 

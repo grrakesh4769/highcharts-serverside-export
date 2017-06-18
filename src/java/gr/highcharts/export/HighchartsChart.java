@@ -44,7 +44,14 @@ public class HighchartsChart
 
 	public String updateSVG()
 	{
-		svgString = HighchartsSVGGenerator.getInstance().generateChartSvg(chartOptions);
+		try
+		{
+			svgString = HighchartsSVGGenerator.getInstance().generateChartSvg(chartOptions);
+		}
+		catch (Exception e)
+		{
+			e.printStackTrace();
+		}
 		return svgString;
 	}
 
